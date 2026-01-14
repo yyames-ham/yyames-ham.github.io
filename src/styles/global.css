@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'Fira Sans';
+  font-family: 'Fira Sans', sans-serif;
   background-color: #d9ccba; /* your custom background */
   color: #170e01;           /* your custom text color */
 }
