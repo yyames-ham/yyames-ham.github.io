@@ -6,7 +6,8 @@ export default {
     extend: {
       colors: {
         bg: "#c4ad8f ",
-        text: "#140c01",
+        main: "#140c01",
+        sub: "211c14",
       },
       fontFamily: {
         sans: ["Fira Sans", "system-ui", "sans-serif"],
