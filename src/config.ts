@@ -1,92 +1,63 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
-  accentColor: "#1d4ed8",
+  name: "James Han",
+  title: "Mechatronics Engineering Student",
+  description: "Portfolio website of James Han",
+  accentColor: "#3a8514",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "",
+    linkedin: "https://linkedin.com/in/james-han-42aa1a384/",
+    twitter: "",
+    github: "https://github.com/yyames-ham",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "I am a first year engineering student at the University of Waterloo studying Honours Mechatronics Engineering (co-op) currently in my 1B term. I excel in design and hands-on work including machining and assembly. I work well in both team and individual settings, capable of productivity with minimal instruction. Some less professional things about me are that I enjoy skiing, building things, and watching movies and video essays and I am always happy to learn new things and improve my skillset",
+  skills: ["C++", "Python", "SolidWorks", "AutoCAD", "Mechanical Design", "Drafting", "Machining", "Composite Layup", "Adobe Illustrator", "Microsoft Excel", "Microsoft Word"],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
-      description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+      name: 'Drawing Robot - "Dron on Top"',
+      description: "A remote-controlled drawing robot capable of drawing using joysticks for freehand controls or buttons to execute predetermined shapes (square, triangle, octagon, smiley face) with customizable sizes.",
+      link: "https://yyames-ham.github.io/projects/drawing-robot",
+      skills: ["C++", "VEX IQ", "Prototyping", "Software Design", "Mechanical Design", "Mechanical Assembly"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
-      description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "ExtensionKit",
-      description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+      name: "Mancala Game",
+      description: "The classic game of mancala coded in python and playable entirely in the console. All rules and abilities of the original game of mancala work including captue and extra turn.",
+      link: "https://yyames-ham.github.io/projects/mancala-game",
+      skills: ["Python"],
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "University of Waterloo Formula Electric",
+      title: "Chassis Team - Member",
+      dateRange: "Sep 2025 - Present",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Prepared molds and carbon fiber for layup of pedal faces",
+        "Prepared for and performed layup of Kevlar dash plate and box lid",
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "UBC Geering Up Engineering Outreach",
+      title: "Junior Instructor",
+      dateRange: "Jul 2024 - Aug 2024",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
-      ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
+        "Applied leadership and organizational skills to manage classrooms and engage students in problem-solving",
+        "Lead weekly STEM-based lessons and activities for children ages 6-12, designed lessons and prepared materials",
+        "Supported instructors in maintaining a safe and structured environment while encouraging students' curiosity in engineering",
       ],
     },
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "University of Waterloo",
+      degree: "Bachelor of Applied Science, Honours Mechatronics Engineering (Co-op)",
+      dateRange: "2025 - Present",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+        "Expected Graduation: 2030",
+        "GPA: 3.92",
+        "Recieved President's Scholarship upon admission",
       ],
     },
-    {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
-    },
+    //add solidworks thing once started
   ],
 };
