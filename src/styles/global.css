@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
 body {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Fira Sans';
+  background-color: #d9ccba; /* your custom background */
+  color: #170e01;           /* your custom text color */
 }
