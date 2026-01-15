@@ -28,7 +28,7 @@ export const siteConfig = {
   ],
   experience: [
     {
-      company: "University of Waterloo Formula Electric",
+      company: "University of Waterloo Formula Electric Design Team",
       title: "Chassis Team - Member",
       dateRange: "Sep 2025 - Present",
       bullets: [
