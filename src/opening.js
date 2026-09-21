@@ -61,20 +61,15 @@ export function createOpening() {
     return null;
   }
 
-  const navigationEntry =
-    performance.getEntriesByType("navigation")[0];
-
   /*
-    Show the opening animation whenever
-    the homepage is loaded or refreshed.
+    Only show the opening animation once
+    per browser tab/session.
   */
-  if (
-    navigationEntry &&
-    navigationEntry.type !== "reload" &&
-    navigationEntry.type !== "navigate"
-  ) {
+  if (sessionStorage.getItem("openingPlayed") === "true") {
     return null;
   }
+
+  sessionStorage.setItem("openingPlayed", "true");
 
   const opening = document.createElement("div");
 
