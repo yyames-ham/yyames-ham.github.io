@@ -1,0 +1,94 @@
+/* =========================================
+   HOMEPAGE NAVIGATION — TYPING
+========================================= */
+
+.home-link-title {
+  white-space: nowrap;
+  visibility: hidden;
+}
+
+html.page-loaded .home-link-title {
+  visibility: visible;
+}
+
+.home-link-title .typing-character {
+  opacity: 0;
+}
+
+.home-link-title .typing-character.visible {
+  opacity: 1;
+  transition: opacity 60ms linear;
+}
+
+/* =========================================
+   HOMEPAGE SUPPORTING TEXT — FADE
+========================================= */
+
+.home-eyebrow,
+.home-description {
+  opacity: 0;
+}
+
+html.home-animation-ready .home-eyebrow {
+  opacity: 1;
+  transition: opacity 800ms ease;
+  transition-delay: 150ms;
+}
+
+html.home-animation-ready .home-description {
+  opacity: 1;
+  transition: opacity 800ms ease;
+  transition-delay: 300ms;
+}
+
+/* =========================================
+   INNER PAGE HEADER — TYPING
+========================================= */
+
+.page-kicker,
+.page-heading h2,
+.about-heading h2,
+.about-description .large-copy {
+  visibility: hidden;
+}
+
+.page-kicker .typing-character,
+.page-heading h2 .typing-character,
+.about-heading h2 .typing-character,
+.about-description .typing-character {
+  opacity: 0;
+  visibility: visible;
+}
+
+.page-kicker .typing-character.visible,
+.page-heading h2 .typing-character.visible,
+.about-heading h2 .typing-character.visible,
+.about-description .typing-character.visible {
+  opacity: 1;
+  transition: opacity 60ms linear;
+}
+
+
+/* =========================================
+   INNER PAGE TEXT — EXIT SWIPE
+========================================= */
+
+.page-kicker,
+.page-heading h2,
+.about-heading h2,
+.about-description .large-copy {
+  clip-path: inset(0 0 -20% 0);
+}
+
+html.page-leaving .page-kicker,
+html.page-leaving .page-heading h2,
+html.page-leaving .about-heading h2,
+html.page-leaving .about-description .large-copy {
+  clip-path: inset(0 100% -20% 0);
+  transition: clip-path 650ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+html.page-leaving .page-content {
+  opacity: 1;
+  transition: none;
+}

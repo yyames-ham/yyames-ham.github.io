@@ -1,0 +1,1081 @@
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotDisp-65Medium-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotDisp-66MediumItalic-Trial.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotDisp-75Bold-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotDisp-76BoldItalic-Trial.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotDisp-95Black-Trial.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Haas Grotesk";
+  src: url("/fonts/NeueHaasGrotDisp-96BlackItalic-Trial.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap");
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+  --background: #d8d4c1;
+  --foreground: #241d13;
+  --muted: #847b74;
+
+  --line: rgb(62, 48, 32);
+  --line-strong: rgb(49, 39, 25);
+
+  --page-padding: 34px;
+
+  --header-height: 96px;
+  --footer-height: 78px;
+
+  --ease: cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+html.dark {
+  --background: #0f0d0b;
+  --foreground: #74974e;
+  --muted: #65794b;
+
+  --line: rgb(64, 70, 33);
+  --line-strong: rgb(100, 116, 55);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  overflow: hidden;
+
+  background: var(--background);
+  color: var(--foreground);
+
+  font-family: "DejaVu Sans Mono", monospace;
+  font-weight: 300;
+}
+
+/* -----------------------------------------
+   HEADING FONTS
+----------------------------------------- */
+
+h1 {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+
+h2 {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h3 {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 2.3em;
+}
+
+.opening-name {
+  font-family: "Neue Haas Grotesk", sans-serif;
+  font-weight: 450;
+  font-style: italic;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+  position: fixed;
+  z-index: 30;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: var(--header-height);
+
+  padding: 0 var(--page-padding);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo svg {
+  width: 33px;
+  height: 33px;
+  display: block;
+  shape-rendering: crispEdges;
+}
+
+.footer-logo svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  shape-rendering: crispEdges;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  position: relative;
+  padding: 8px 0;
+}
+
+
+/* =========================================
+   GLOBAL FRAME
+========================================= */
+
+.grid-system {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  pointer-events: none;
+}
+
+.grid-system::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  box-sizing: border-box;
+
+  border: 2px solid var(--line-strong);
+}
+
+
+/* Header divider */
+
+.grid-header {
+  position: absolute;
+
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  background: var(--line-strong);
+}
+
+
+/* Footer divider */
+
+.grid-footer {
+  position: absolute;
+
+  bottom: var(--footer-height);
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  background: var(--line-strong);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  position: fixed;
+
+  z-index: 100;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: var(--footer-height);
+
+  padding: 0 var(--page-padding);
+
+  background: var(--background);
+}
+
+.footer-content {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+}
+
+.footer-logo {
+  font-weight: 500;
+}
+
+.copyright {
+  color: var(--muted);
+}
+
+.theme-toggle {
+  border: 0;
+  border-radius: 0;
+
+  background: transparent;
+
+  padding: 8px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+}
+
+.theme-divider {
+  width: 1px;
+  height: 12px;
+
+  background: var(--line-strong);
+}
+
+.theme-toggle:hover {
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   HOME
+========================================= */
+
+.home-page {
+  width: 100%;
+  height: 100dvh;
+
+  overflow: hidden;
+}
+
+.home-content {
+  width: 100%;
+  height: 100%;
+
+  padding:
+    var(--header-height)
+    calc(var(--page-padding) + 5%)
+    var(--footer-height);
+
+  display: grid;
+
+  grid-template-rows:
+    minmax(0, 1fr)
+    auto;
+}
+
+.home-intro {
+  align-self: center;
+
+  padding-bottom: 4vh;
+}
+
+.home-eyebrow {
+  margin-bottom: 28px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  color: var(--muted);
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.home-intro h1 {
+  margin: 0;
+
+  font-size: clamp(90px, 14vw, 215px);
+
+  line-height: 0.8;
+
+  letter-spacing: -0.045em;
+}
+
+.home-description {
+  max-width: 1080px;
+
+  margin: 48px 0 0;
+
+  font-size: 14px;
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   HOME PAGE NAVIGATION
+========================================= */
+
+.home-navigation {
+  position: relative;
+
+  width: 100vw;
+
+  margin-left: calc((100% - 100vw) / 2);
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.home-navigation::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 2px;
+
+  background: var(--line-strong);
+}
+
+.home-link {
+  position: relative;
+
+  min-height: 85px;
+
+  padding: 22px 24px;
+
+  display: grid;
+
+  grid-template-columns: 40px 1fr 30px;
+
+  align-items: start;
+
+  border-right: none;
+}
+
+.home-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--line-strong);
+}
+
+.home-link:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: var(--line-strong);
+}
+
+.home-link:last-child {
+  border-right: 0;
+}
+
+.home-link:hover {
+  background: rgba(17, 17, 17, 0.045);
+}
+
+.dark .home-link:hover {
+  background: rgba(243, 242, 238, 0.045);
+}
+
+.home-link-number {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  color: var(--muted);
+}
+
+.home-link-title {
+  font-family: "DejaVu Sans Mono", monospace;
+
+  font-size: 25px;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* =========================================
+   INNER PAGES
+========================================= */
+
+.inner-page {
+  position: absolute;
+
+  top: var(--header-height);
+  left: 0;
+  right: 0;
+  bottom: var(--footer-height);
+
+  height: auto;
+
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: none;
+
+  background: var(--background);
+
+  box-sizing: border-box;
+}
+
+.inner-page > * {
+  margin-bottom: 0;
+}
+
+.page-heading {
+  height: 190px;
+
+  display: grid;
+
+  grid-template-columns: 28% 72%;
+}
+
+.page-heading {
+  position: relative;
+}
+
+.page-heading::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: var(--line-strong);
+}
+
+.page-number {
+  padding: 22px 24px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 12px;
+
+  color: var(--muted);
+}
+
+.page-heading > div {
+  position: relative;
+  padding: 22px 30px;
+}
+
+.page-heading > div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--line-strong);
+}
+
+.page-kicker {
+  margin-bottom: 20px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.page-heading h2,
+.about-heading h2 {
+  margin: 0;
+
+  font-size: clamp(70px, 9vw, 145px);
+
+  line-height: 0.8;
+
+  letter-spacing: -0.025em;
+}
+
+
+/* =========================================
+   INTERNAL SCROLL AREA
+========================================= */
+
+.page-scroll {
+  height: calc(100% - 190px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    var(--line-strong)
+    transparent;
+}
+
+.page-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.page-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.page-scroll::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+}
+
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.intro-section {
+  padding: 55px 24px 65px 24px;
+
+  border-bottom: 2px solid var(--line-strong);
+}
+
+.large-copy {
+  max-width: 1050px;
+
+  margin: 0;
+
+  font-size: clamp(30px, 4vw, 58px);
+
+  line-height: 1.04;
+
+  letter-spacing: -0.05em;
+}
+
+.split-section {
+  display: grid;
+
+  grid-template-columns: 24% 76%;
+
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.section-label {
+  padding: 25px 24px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.section-content {
+  border-left: 2px solid var(--line-strong);
+
+  padding-left: 30px;
+  padding-right: 24px;
+}
+
+.list > * {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.list > *:last-child {
+  border-bottom: 0;
+}
+
+.list a {
+  justify-content: space-between;
+
+  padding-right: 20px;
+}
+
+.list a:hover {
+  padding-left: 12px;
+}
+
+
+/* =========================================
+   ABOUT INTRO
+========================================= */
+
+.about-intro {
+  position: relative;
+
+  height: 190px;
+
+  display: grid;
+
+  grid-template-columns: 37% 63%;
+}
+
+.about-intro::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: var(--line-strong);
+}
+
+.about-heading {
+  position: relative;
+
+  height: 190px;
+
+  padding: 0 34px;
+
+  box-sizing: border-box;
+}
+
+.about-heading::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--line-strong);
+}
+
+.about-heading-top {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0;
+}
+
+.about-heading .page-kicker {
+  margin: 0;
+}
+
+.about-heading h2 {
+  position: absolute;
+
+  left: 70px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  margin: 0;
+}
+
+.about-heading-text {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: left;
+}
+
+.about-description {
+  display: flex;
+
+  align-items: center;
+
+  padding: 0 34px;
+}
+
+.about-description .large-copy {
+  margin: 0;
+
+  max-width: 780px;
+
+  font-size: 24px;
+
+  line-height: 1.25;
+}
+
+.about-page .about-heading .page-number {
+  left: 32px;
+}
+
+
+/* =========================================
+   EXPERIENCE / EDUCATION
+========================================= */
+
+.experience-item,
+.education-item {
+  display: grid;
+
+  grid-template-columns: 18% 82%;
+
+  min-height: 190px;
+
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.item-date {
+  padding: 25px 24px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 12px;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.item-main {
+  border-left: 2px solid var(--line-strong);
+
+  padding: 12px 24px 35px 30px;
+}
+
+.item-main h2 {
+  margin: 0;
+
+  font-size: clamp(28px, 3vw, 48px);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -0.05em;
+}
+
+.item-company {
+  margin: 10px 0 25px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 14px;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+.item-description {
+  max-width: 650px;
+
+  margin: 0 0 24px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: var(--foreground);
+}
+
+.tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.tags span {
+  border: 1px solid var(--line-strong);
+
+  padding: 5px 7px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   CERTIFICATIONS
+========================================= */
+
+.certifications {
+  display: grid;
+
+  grid-template-columns: 18% 82%;
+
+  border-bottom: 1px solid var(--line-strong);
+}
+
+
+/* =========================================
+   PROJECTS
+========================================= */
+
+.project-item {
+  display: grid;
+
+  grid-template-columns: 8% 1fr 35px;
+
+  min-height: 170px;
+
+  padding: 30px 24px;
+
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.project-item:hover {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.project-number {
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  color: var(--muted);
+}
+
+.project-main h2 {
+  margin: 0 0 12px;
+
+  font-size: clamp(30px, 4vw, 58px);
+
+  line-height: 0.9;
+
+  font-weight: 500;
+
+  letter-spacing: -0.055em;
+}
+
+.project-main p {
+  max-width: 600px;
+
+  margin: 0 0 22px;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  :root {
+    --page-padding: 18px;
+    --header-height: 75px;
+    --footer-height: 70px;
+  }
+
+  .main-nav {
+    gap: 15px;
+    font-size: 8px;
+  }
+
+  .main-nav a:nth-child(3),
+  .main-nav a:nth-child(4) {
+    display: none;
+  }
+
+  .home-content {
+    padding:
+      var(--header-height)
+      calc(var(--page-padding) + 3%)
+      var(--footer-height);
+  }
+
+  .home-intro h1 {
+    font-size: clamp(65px, 18vw, 125px);
+  }
+
+  .home-navigation {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-link {
+    min-height: 80px;
+
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .home-link:nth-child(2) {
+    border-right: 0;
+  }
+
+  .home-link:nth-child(3) {
+    border-left: 1px solid var(--line-strong);
+  }
+
+  .inner-page {
+    left: var(--page-padding);
+    right: var(--page-padding);
+  }
+
+  .page-heading {
+    grid-template-columns: 20% 80%;
+    height: 170px;
+  }
+
+  .page-heading > div {
+    padding-left: 18px;
+  }
+
+  .page-heading h2,
+  .about-heading h2 {
+    font-size: clamp(55px, 15vw, 100px);
+  }
+
+  .split-section,
+  .experience-item,
+  .education-item,
+  .certifications {
+    grid-template-columns: 1fr;
+  }
+
+  .section-content,
+  .item-main {
+    border-left: 0;
+
+    border-top: 2px solid var(--line-strong);
+
+    padding-left: 0;
+  }
+
+  .section-label {
+    padding: 18px 0;
+  }
+
+  .project-item {
+    grid-template-columns: 30px 1fr 25px;
+  }
+
+  .footer-left {
+    gap: 12px;
+  }
+
+  .copyright {
+    font-size: 8px;
+  }
+}
+

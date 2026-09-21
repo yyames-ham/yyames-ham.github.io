@@ -1,0 +1,363 @@
+/* =========================================
+   INITIAL THEME LOAD
+   ========================================= */
+
+html.theme-preload,
+html.theme-preload *,
+html.theme-preload *::before,
+html.theme-preload *::after {
+  transition: none !important;
+}
+
+
+/* =========================================
+   THEME TRANSITION
+========================================= */
+
+html,
+body,
+.site-footer,
+.home-page,
+.inner-page,
+.grid-system,
+.theme-toggle {
+  transition:
+    background-color 700ms ease,
+    color 700ms ease,
+    border-color 700ms ease;
+}
+
+.grid-system::before,
+.grid-header,
+.grid-footer,
+.home-navigation::before,
+.home-link,
+.page-heading::after,
+.about-intro::after,
+.about-heading {
+  transition:
+    background-color 300ms ease,
+    border-color 300ms ease;
+}
+
+
+/* =========================================
+   INNER PAGE HEADER LINE
+========================================= */
+
+.page-heading::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* -----------------------------------------
+   INITIAL STATE
+----------------------------------------- */
+
+html:not(.page-loaded) .page-heading::after {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* -----------------------------------------
+   ENTER
+----------------------------------------- */
+
+html.page-loaded .page-heading::after {
+  animation: inner-header-line-enter
+    650ms
+    cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+}
+
+/* -----------------------------------------
+   EXIT
+----------------------------------------- */
+
+html.page-leaving .page-heading::after {
+  animation: inner-header-line-exit
+    650ms
+    cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+}
+
+/* -----------------------------------------
+   KEYFRAMES
+----------------------------------------- */
+
+@keyframes inner-header-line-enter {
+  from {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+@keyframes inner-header-line-exit {
+  from {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+
+  to {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
+
+/* =========================================
+   ABOUT INNER HEADER LINE
+========================================= */
+
+.about-intro::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* -----------------------------------------
+   INITIAL STATE
+----------------------------------------- */
+
+html:not(.page-loaded) .about-intro::after {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* -----------------------------------------
+   ENTER
+----------------------------------------- */
+
+html.page-loaded .about-intro::after {
+  animation: about-header-line-enter
+    650ms
+    cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+}
+
+/* -----------------------------------------
+   EXIT
+----------------------------------------- */
+
+html.page-leaving .about-intro::after {
+  animation: about-header-line-exit
+    650ms
+    cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+}
+
+/* -----------------------------------------
+   KEYFRAMES
+----------------------------------------- */
+
+@keyframes about-header-line-enter {
+  from {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+@keyframes about-header-line-exit {
+  from {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+
+  to {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
+
+
+/* =========================================
+   HOME NAVIGATION LINE
+========================================= */
+
+.home-navigation::before {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+/* -----------------------------------------
+   INITIAL STATE
+----------------------------------------- */
+
+html:not(.page-loaded) .home-navigation::before {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* -----------------------------------------
+   ENTER
+----------------------------------------- */
+
+html.page-loaded .home-navigation::before {
+  animation: home-nav-line-enter
+    650ms
+    cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+}
+
+/* -----------------------------------------
+   EXIT
+----------------------------------------- */
+
+html.page-leaving .home-navigation::before {
+  animation: home-nav-line-exit
+    650ms
+    cubic-bezier(0.77, 0, 0.175, 1)
+    forwards;
+}
+
+/* -----------------------------------------
+   KEYFRAMES
+----------------------------------------- */
+
+@keyframes home-nav-line-enter {
+  from {
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+
+  to {
+    transform: scaleX(1);
+    transform-origin: left center;
+  }
+}
+
+@keyframes home-nav-line-exit {
+  from {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
+
+  to {
+    transform: scaleX(0);
+    transform-origin: right center;
+  }
+}
+
+
+/* =========================================
+   INNER PAGE CONTENT FADE
+========================================= */
+
+.inner-page .page-scroll {
+  opacity: 0;
+}
+
+/* -----------------------------------------
+   ENTER
+----------------------------------------- */
+
+html.page-loaded .inner-page .page-scroll {
+  animation: inner-content-fade-in
+    250ms
+    ease-out
+    300ms
+    forwards;
+}
+
+/* -----------------------------------------
+   EXIT
+----------------------------------------- */
+
+html.page-leaving .inner-page .page-scroll {
+  animation: inner-content-fade-out
+    200ms
+    ease-out
+    forwards;
+}
+
+/* -----------------------------------------
+   KEYFRAMES
+========================================= */
+
+@keyframes inner-content-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes inner-content-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   INNER PAGE VERTICAL LINE
+   ========================================= */
+
+.page-heading > div::before {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 650ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Entering an inner page */
+html.page-loaded .page-heading > div::before {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Leaving an inner page */
+html.page-leaving .page-heading > div::before {
+  clip-path: inset(0 0 100% 0);
+}
+
+/* -----------------------------------------
+   ABOUT PAGE VERTICAL LINE
+   ----------------------------------------- */
+
+.about-heading::after {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 650ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+html.page-loaded .about-heading::after {
+  clip-path: inset(0 0 0 0);
+}
+
+html.page-leaving .about-heading::after {
+  clip-path: inset(0 0 100% 0);
+}
+
+
+/* =========================================
+   HOMEPAGE NAV VERTICAL LINES
+   ========================================= */
+
+.home-link::after,
+.home-link:first-child::before {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 650ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+/* Entering homepage — extend upward */
+html.page-loaded .home-link::after,
+html.page-loaded .home-link:first-child::before {
+  clip-path: inset(0 0 0 0);
+}
+
+/* Leaving homepage — retract downward */
+html.page-leaving .home-link::after,
+html.page-leaving .home-link:first-child::before {
+  clip-path: inset(100% 0 0 0);
+}
