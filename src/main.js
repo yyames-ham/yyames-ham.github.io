@@ -398,12 +398,13 @@ function educationPage() {
             <h3>University of Waterloo</h3>
 
             <p class="item-company">
-              Bachelor of Applied Science · Honuors Mechatronics Engineering
+              Bachelor of Applied Science · Honours Mechatronics Engineering
             </p>
 
             <p class="item-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Integer posuere erat a ante.
+              Currently pursuing a degree at the #1 rated school for engineering in Canada. Studying
+              at the intersection of mechanical, software, and electrical engineering, I am devloping
+              a wide skill set and multiple design perspectives, making me ready for anything.
             </p>
 
           </div>
@@ -419,11 +420,11 @@ function educationPage() {
 
             <div class="certification-item">
               <div class="certification-name">
-                Certification Name
+                SolidWorks Design Associate (CSWA)
               </div>
 
               <p class="item-company">
-                Issuing Organization
+                VirtualTester Online, Tangix Design & Development AB
               </p>
             </div>
 

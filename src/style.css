@@ -850,19 +850,11 @@ button {
 .item-main {
   border-left: 2px solid var(--line-strong);
 
-  padding: 12px 24px 35px 30px;
+  padding: 30px 24px 35px;
 }
 
-.item-main h2 {
+.item-main h3 {
   margin: 0;
-
-  font-size: clamp(28px, 3vw, 48px);
-
-  line-height: 1;
-
-  font-weight: 500;
-
-  letter-spacing: -0.05em;
 }
 
 .item-company {
@@ -878,9 +870,9 @@ button {
 }
 
 .item-description {
-  max-width: 650px;
+  max-width: 1000px;
 
-  margin: 0 0 24px;
+  margin: 0 0 0;
 
   font-size: 13px;
 
@@ -895,6 +887,8 @@ button {
   flex-wrap: wrap;
 
   gap: 7px;
+
+  margin: 24px 0 0 0;
 }
 
 .tags span {
