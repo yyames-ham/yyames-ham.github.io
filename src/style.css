@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap");
+
 @font-face {
   font-family: "Neue Haas Grotesk";
   src: url("/fonts/NeueHaasGrotDisp-65Medium-Trial.otf") format("opentype");
@@ -45,8 +47,6 @@
   font-style: italic;
   font-display: swap;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&display=swap");
 
 
 /* =========================================

@@ -65,10 +65,14 @@ export function createOpening() {
     performance.getEntriesByType("navigation")[0];
 
   /*
-    Only show the opening animation
-    when the homepage is refreshed.
+    Show the opening animation whenever
+    the homepage is loaded or refreshed.
   */
-  if (!navigationEntry || navigationEntry.type !== "reload") {
+  if (
+    navigationEntry &&
+    navigationEntry.type !== "reload" &&
+    navigationEntry.type !== "navigate"
+  ) {
     return null;
   }
 

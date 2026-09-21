@@ -1,17 +1,18 @@
-import { defineConfig } from 'vite'
-import { resolve } from 'node:path'
+import { defineConfig } from "vite";
+import { resolve } from "node:path";
 
 export default defineConfig({
-  base: '/',
+  base: "/",
+
   build: {
     rollupOptions: {
       input: {
-        main: resolve(import.meta.dirname, 'index.html'),
-        about: resolve(import.meta.dirname, 'about.html'),
-        education: resolve(import.meta.dirname, 'education.html'),
-        experience: resolve(import.meta.dirname, 'experience.html'),
-        projects: resolve(import.meta.dirname, 'projects.html'),
+        main: resolve(import.meta.dirname, "index.html"),
+        about: resolve(import.meta.dirname, "about.html"),
+        experience: resolve(import.meta.dirname, "experience.html"),
+        education: resolve(import.meta.dirname, "education.html"),
+        projects: resolve(import.meta.dirname, "projects.html"),
       },
     },
   },
-})
+});
