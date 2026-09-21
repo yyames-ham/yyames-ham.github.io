@@ -953,11 +953,9 @@ button {
 .project-item {
   display: grid;
 
-  grid-template-columns: 8% 1fr 35px;
+  grid-template-columns: 12% 88%;
 
-  min-height: 170px;
-
-  padding: 30px 24px;
+  min-height: 190px;
 
   border-bottom: 1px solid var(--line-strong);
 }
@@ -968,35 +966,37 @@ button {
 }
 
 .project-number {
+  padding: 25px 24px;
+
   font-family: "DM Mono", monospace;
 
-  font-size: 10px;
+  font-size: 12px;
+
+  text-transform: uppercase;
 
   color: var(--muted);
 }
 
-.project-main h2 {
-  margin: 0 0 12px;
+.project-main {
+  border-left: 2px solid var(--line-strong);
 
-  font-size: clamp(30px, 4vw, 58px);
+  padding: 30px 24px 35px;
+}
 
-  line-height: 0.9;
-
-  font-weight: 500;
-
-  letter-spacing: -0.055em;
+.project-main h3 {
+  margin: 0;
 }
 
 .project-main p {
-  max-width: 600px;
+  max-width: 1000px;
 
-  margin: 0 0 22px;
+  margin: 10px 0 0 0;
 
   font-size: 13px;
 
   line-height: 1.7;
 
-  color: var(--muted);
+  color: var(--foreground);
 }
 
 
