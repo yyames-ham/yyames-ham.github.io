@@ -395,10 +395,10 @@ function educationPage() {
 
           <div class="item-main">
 
-            <h3>Honours Mechatronics Engineering</h3>
+            <h3>University of Waterloo</h3>
 
             <p class="item-company">
-              Bachelor of Applied Science · University of Waterloo
+              Bachelor of Applied Science · Honuors Mechatronics Engineering
             </p>
 
             <p class="item-description">
@@ -411,15 +411,22 @@ function educationPage() {
         </section>
 
         <section class="certifications">
-
           <div class="section-label">
             Certifications
           </div>
 
-          <div class="section-content list">
-            <div>Certification Placeholder</div>
-            <div>Certification Placeholder</div>
-            <div>Certification Placeholder</div>
+          <div class="section-content list certifications-list">
+
+            <div class="certification-item">
+              <div class="certification-name">
+                Certification Name
+              </div>
+
+              <p class="item-company">
+                Issuing Organization
+              </p>
+            </div>
+
           </div>
 
         </section>

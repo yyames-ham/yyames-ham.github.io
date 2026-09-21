@@ -713,7 +713,6 @@ button {
   padding-left: 12px;
 }
 
-
 /* =========================================
    ABOUT INTRO
 ========================================= */
@@ -921,6 +920,37 @@ button {
   border-bottom: 1px solid var(--line-strong);
 }
 
+.certification-item {
+  display: block;
+}
+
+.certification-item .certification-name {
+  display: block;
+
+  font-size: 18px;
+}
+
+.certification-item .item-company {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 0;
+
+  font-size: 12px;
+}
+
+.certifications-list > * {
+  padding: 21px 0;
+}
+
+.certifications-list .certification-item {
+  display: block;
+  width: 100%;
+}
+
+.certifications-list .item-company {
+  display: block;
+  width: 100%;
+}
 
 /* =========================================
    PROJECTS
