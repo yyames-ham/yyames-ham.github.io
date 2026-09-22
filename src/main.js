@@ -207,6 +207,10 @@ function aboutPage() {
             <div>AutoCAD</div>
             <div>C++</div>
             <div>Python</div>
+            <div>Machining</div>
+            <div>Composite Layup</div>
+            <div>GD&T</div>
+            <div>2D & 3D CAD</div>
           </div>
 
         </section>
@@ -285,82 +289,61 @@ function experiencePage() {
           <article class="experience-item">
 
             <div class="item-date">
-              2026 — Present
+              Sep 2025 — Present
             </div>
 
             <div class="item-main">
 
-              <h3>Engineering Position</h3>
+              <h3>Chassis Team Member</h3>
 
               <p class="item-company">
-                Company Name
+                University of Waterloo Formula Electric Design Team
               </p>
 
               <p class="item-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer posuere erat a ante.
+                Assisting in the creation of the structural framework of the competition car and working
+                closely with other subteams to ensure the seamless integration of all physical systems.
+                As a team member I have assisted in the creation of pedal faces using 3D printed molds and
+                laying both kevlar and carbon fiber composite materials.
               </p>
 
               <div class="tags">
-                <span>ENGINEERING</span>
-                <span>DESIGN</span>
-                <span>CAD</span>
-              </div>
-
-            </div>
-
-          </article>
-
-          <article class="experience-item">
-
-            <div class="item-date">
-              2025 — 2026
-            </div>
-
-            <div class="item-main">
-
-              <h3>Design Team Member</h3>
-
-              <p class="item-company">
-                University Design Team
-              </p>
-
-              <p class="item-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer posuere erat a ante.
-              </p>
-
-              <div class="tags">
-                <span>MECHANICAL</span>
-                <span>PROTOTYPING</span>
-              </div>
-
-            </div>
-
-          </article>
-
-          <article class="experience-item">
-
-            <div class="item-date">
-              2024 — 2025
-            </div>
-
-            <div class="item-main">
-
-              <h3>Previous Experience</h3>
-
-              <p class="item-company">
-                Company Name
-              </p>
-
-              <p class="item-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer posuere erat a ante.
-              </p>
-
-              <div class="tags">
-                <span>TECHNOLOGY</span>
+                <span>COMPOSITE LAYUP</span>
+                <span>MACHINING</span>
                 <span>TEAMWORK</span>
+              </div>
+
+            </div>
+
+          </article>
+
+          <article class="experience-item">
+
+            <div class="item-date">
+              Jun - Aug 2026
+            </div>
+
+            <div class="item-main">
+
+              <h3>Digital Bootcamp: Web Design and Marketing Project Team Member</h3>
+
+              <p class="item-company">
+                Waterloo Experience Accelerate Program (remote)
+              </p>
+
+              <p class="item-description">
+                Created a simulated company and website with a team of 4 using WIX to develop knowledge and 
+                skills in web-design and marketing practices. Also completed a month-long project-based 
+                experience with the Learning Disabilities Association of Chatham-Kent, performing audits and
+                reviews and creating a content calendar in order to increase online presence and outreach, 
+                increase personnel numbers and foster better organization within the company.
+              </p>
+
+              <div class="tags">
+                <span>WEB DESIGN</span>
+                <span>COMMUNICATIONS</span>
+                <span>ORGANIZATION</span>
+                <span>WIX STUDIO</span>
               </div>
 
             </div>
@@ -411,10 +394,10 @@ function educationPage() {
             </p>
 
             <p class="item-description">
-              Currently pursuing a degree at the #1 rated school for engineering in Canada. Studying
-              at the intersection of mechanical, software, and electrical engineering, I am developing
-              a large skill set and multiple design perspectives; preparing myself to graduate in 2030,
-              ready for anything.
+              Currently pursuing an engineering degree at the #1 rated school for engineering in Canada. 
+              Studying at the intersection of mechanical, software, and electrical engineering, I am 
+              developing a large skill set and multiple design perspectives; preparing myself to graduate
+              in 2030 ready for anything.
             </p>
 
           </div>
@@ -482,7 +465,12 @@ function projectsPage() {
               <h3>Drawing Robot - "Dron on Top"</h3>
 
               <p>
-                Created in a group of 4 for a final project.
+                A robot that draws freehand using joysticks and pretedetermined shapes using buttons
+                in a group of 4 for a final project using VEX IQ parts and C++ software.
+                I took full responsibility for mechanical design and assembly, and thought out of the
+                box to create a gantry system despite part limitations using a sprocket and chain to 
+                mimic the movement of a rack and pinion. I also took charge of designing the boundary-detection
+                logic, joystick movement controls, and one of the four predetermined shape functions.
               </p>
 
               <div class="tags">
@@ -509,8 +497,10 @@ function projectsPage() {
               <h3>Mancala</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer posuere erat a ante.
+                A fully functional 2-player game of Mancala playable in the command line interface.
+                Implemented turn-based logic, and edge-cases that account for opponent store skipping, 
+                empty pit captures, and extra turns. Used modular functions to render the board in the
+                console, validate inputs, calculate stone movements,calculate score, and detect game end.
               </p>
 
               <div class="tags">
