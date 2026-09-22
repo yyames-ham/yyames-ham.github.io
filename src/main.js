@@ -181,15 +181,12 @@ function aboutPage() {
 
         <div class="about-description">
           <p class="large-copy">
-            I'm James Han, Honours Mechatronics Engineering student at the University of 
-            Waterloo, originally from Vancouver, with a strong interest in physics and hands-on 
-            engineering. My favorite way to learn is by building: 
-              on my Drawing Robot project, I designed and assembled a VEX IQ-based gantry system
-               while writing the C++ control software myself, and as a Chassis Team member on the
-                University of Waterloo Formula Electric design team, I work hands-on with 
-                composite layup, machining, and vehicle-level testing. I'm especially drawn to
-                 engineering for extreme environments and the future of electrified, autonomous
-                  systems — from EVs and drones to marine robotics — and I'm working toward my P.Eng. while building a portfolio of projects I'm genuinely proud of.
+            I'm James Han, a second year Mechatronics Engineering student at the University 
+            of Waterloo. I take a strong interest in mechanical design, robotics, CAD, 
+            prototyping, and embedded software, but am a fast learner and open to all 
+            opportunities.<br><br>
+            I'm currently seeking a 4 month Winter 2027 co-op position starting in
+            January, feel free to reach out via LinkedIn or email.
           </p>
         </div>
 
@@ -205,11 +202,12 @@ function aboutPage() {
 
           <div class="section-content list">
             <div>Mechanical Design</div>
-            <div>CAD / SolidWorks</div>
-            <div>Programming</div>
+            <div>SolidWorks</div>
+            <div>2D & 3D CAD</div>
+            <div>C++</div>
+            <div>Python</div>
             <div>Embedded Systems</div>
             <div>Robotics</div>
-            <div>3D Printing</div>
           </div>
 
         </section>
@@ -237,6 +235,18 @@ function aboutPage() {
               rel="noreferrer"
             >
               <span>LinkedIn</span>
+              <span>↗</span>
+            </a>
+
+            <a
+              href="mailto:jamesyrhan@gmail.com">
+              <span>Primary Email</span>
+              <span>↗</span>
+            </a>
+
+            <a
+              href="mailto:j288han@uwaterloo.ca">
+              <span>School Email</span>
               <span>↗</span>
             </a>
 
@@ -390,7 +400,7 @@ function educationPage() {
         <section class="education-item">
 
           <div class="item-date">
-            2025 — 2030
+            2025 — Present<br><br>GPA: 3.26
           </div>
 
           <div class="item-main">
@@ -403,8 +413,9 @@ function educationPage() {
 
             <p class="item-description">
               Currently pursuing a degree at the #1 rated school for engineering in Canada. Studying
-              at the intersection of mechanical, software, and electrical engineering, I am devloping
-              a wide skill set and multiple design perspectives, making me ready for anything.
+              at the intersection of mechanical, software, and electrical engineering, I am developing
+              a wide skill set and multiple design perspectives; preparing myself to graduate in 2023,
+              ready for anything.
             </p>
 
           </div>
@@ -464,21 +475,24 @@ function projectsPage() {
           <a href="#" class="project-item">
 
             <span class="project-number">
-              01
+              Nov 2025
             </span>
 
             <div class="project-main">
 
-              <h3>Project One</h3>
+              <h3>Drawing Robot - "Dron on Top"</h3>
 
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer posuere erat a ante.
+                Created in a group of 4 for a final project. /*ADD MORE INFO*/
               </p>
 
               <div class="tags">
-                <span>CAD</span>
-                <span>MECHANICAL</span>
+                <span>MECHANICAL DESIGN</span>
+                <span>VEX IQ</span>
+                <span>C++</span>
+                <span>PROTOTYPING</span>
+                <span>EMBEDDED PROGRAMMING</span>
+                <span>SENSORS</span>
               </div>
 
             </div>
@@ -488,7 +502,7 @@ function projectsPage() {
           <a href="#" class="project-item">
 
             <span class="project-number">
-              02
+              Jan 2025
             </span>
 
             <div class="project-main">
@@ -503,30 +517,6 @@ function projectsPage() {
               <div class="tags">
                 <span>PROGRAMMING</span>
                 <span>ROBOTICS</span>
-              </div>
-
-            </div>
-
-          </a>
-
-          <a href="#" class="project-item">
-
-            <span class="project-number">
-              03
-            </span>
-
-            <div class="project-main">
-
-              <h3>Project Three</h3>
-
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer posuere erat a ante.
-              </p>
-
-              <div class="tags">
-                <span>DESIGN</span>
-                <span>PROTOTYPING</span>
               </div>
 
             </div>
@@ -742,26 +732,45 @@ window.addEventListener("opening-complete", () => {
 function typeText(element, speed) {
   if (!element) return;
 
-  const text = element.textContent;
-  element.textContent = "";
+  const nodes = [...element.childNodes];
+  element.innerHTML = "";
 
-  [...text].forEach((character, index) => {
-    const span = document.createElement("span");
+  let characterIndex = 0;
 
-    span.className = "typing-character";
-    span.textContent = character;
+  nodes.forEach((node) => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      [...node.textContent].forEach((character) => {
+        const span = document.createElement("span");
 
-    element.appendChild(span);
+        span.className = "typing-character";
+        span.textContent = character;
 
-    setTimeout(() => {
-      span.classList.add("visible");
-    }, index * speed);
+        element.appendChild(span);
+
+        setTimeout(() => {
+          span.classList.add("visible");
+        }, characterIndex * speed);
+
+        characterIndex++;
+      });
+    }
+
+    else if (node.nodeName === "BR") {
+      const marker = document.createComment("typing-break");
+
+      element.appendChild(marker);
+
+      setTimeout(() => {
+        const br = document.createElement("br");
+        marker.replaceWith(br);
+      }, characterIndex * speed);
+    }
   });
 }
 
 function startInnerTyping() {
   const speed1 = 110;
-  const speed2 = 25;
+  const speed2 = 10;
 
   document
     .querySelectorAll(".page-kicker, .page-heading h2, .about-heading h2")
