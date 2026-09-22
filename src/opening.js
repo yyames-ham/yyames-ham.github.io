@@ -65,9 +65,20 @@ export function createOpening() {
     Only show the opening animation once
     per browser tab/session.
   */
-  if (sessionStorage.getItem("openingPlayed") === "true") {
-    return null;
-  }
+
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+
+const isReload =
+  navigationEntry && navigationEntry.type === "reload";
+
+const isFirstVisit =
+  !sessionStorage.getItem("openingPlayed");
+
+if (!isFirstVisit && !isReload) {
+  return null;
+}
+
+sessionStorage.setItem("openingPlayed", "true");
 
   sessionStorage.setItem("openingPlayed", "true");
 
