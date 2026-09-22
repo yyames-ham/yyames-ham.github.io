@@ -685,9 +685,6 @@ button {
 
 .section-content {
   border-left: 2px solid var(--line-strong);
-
-  padding-left: 30px;
-  padding-right: 24px;
 }
 
 .list > * {
@@ -707,10 +704,34 @@ button {
   justify-content: space-between;
 
   padding-right: 20px;
+  padding-left: 30px;
 }
 
 .list a:hover {
-  padding-left: 12px;
+  padding-left: 42px;
+}
+
+/*skills list*/
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  column-gap: 0;
+}
+
+.skills-list > *:nth-child(odd) {
+  border-right: 1px solid var(--line);
+  padding-right: 40px;
+  padding-left: 30px;
+}
+
+.skills-list > *:nth-child(even) {
+  padding-left: 40px;
+  padding-right: 30px;
+}
+
+.skills-list > *:nth-last-child(-n + 2) {
+  border-bottom: 0;
 }
 
 /* =========================================
@@ -933,7 +954,7 @@ button {
 }
 
 .certifications-list > * {
-  padding: 21px 0;
+  padding: 21px 30px;
 }
 
 .certifications-list .certification-item {
@@ -1101,5 +1122,21 @@ button {
   .copyright {
     font-size: 8px;
   }
+
+  @media (max-width: 700px) {
+  .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-list > * {
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .skills-list > *:last-child {
+    border-bottom: 0;
+  }
+}
 }
 

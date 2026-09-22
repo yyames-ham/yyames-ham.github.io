@@ -200,14 +200,13 @@ function aboutPage() {
             Skills
           </div>
 
-          <div class="section-content list">
+          <div class="section-content list skills-list">
             <div>Mechanical Design</div>
+            <div>Robotics</div>
             <div>SolidWorks</div>
-            <div>2D & 3D CAD</div>
+            <div>AutoCAD</div>
             <div>C++</div>
             <div>Python</div>
-            <div>Embedded Systems</div>
-            <div>Robotics</div>
           </div>
 
         </section>
@@ -414,7 +413,7 @@ function educationPage() {
             <p class="item-description">
               Currently pursuing a degree at the #1 rated school for engineering in Canada. Studying
               at the intersection of mechanical, software, and electrical engineering, I am developing
-              a wide skill set and multiple design perspectives; preparing myself to graduate in 2023,
+              a large skill set and multiple design perspectives; preparing myself to graduate in 2030,
               ready for anything.
             </p>
 
@@ -483,7 +482,7 @@ function projectsPage() {
               <h3>Drawing Robot - "Dron on Top"</h3>
 
               <p>
-                Created in a group of 4 for a final project. /*ADD MORE INFO*/
+                Created in a group of 4 for a final project.
               </p>
 
               <div class="tags">
@@ -507,7 +506,7 @@ function projectsPage() {
 
             <div class="project-main">
 
-              <h3>Project Two</h3>
+              <h3>Mancala</h3>
 
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -515,8 +514,8 @@ function projectsPage() {
               </p>
 
               <div class="tags">
-                <span>PROGRAMMING</span>
-                <span>ROBOTICS</span>
+                <span>PYTHON</span>
+                <span>GAME DESIGN</span>
               </div>
 
             </div>
